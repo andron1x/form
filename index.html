@@ -31,41 +31,12 @@
         </select>
       </li>
 
-            <!-- <option value="dog">Dog</option>
-            <<p id="demo"></p>
-            <option value="hamster">Hamster</option>
-            <option value="parrot">Parrot</option>
-            <option value="spider">Spider</option>
-            <option value="goldfish">Goldfish</option> -->
-          </select>
       </ul>
     </form>
     <script>
-//   const getJSON = async url => {
-//   const response = await fetch(url);
-//   return response.json(); 
-// }
-
-// getJSON("https://frontend-take-home.fetchrewards.com/form")
-//   .then(data => console.log(data));
-
-//   var select = document.getElementById("selectNumber");
-// var data = [data];
-
-// for(var i = 0; i < data.length; i++) {
-//     var opt = data[i];
-//     var el = document.createElement("option");
-//     el.textContent = opt;
-//     el.value = opt;
-//     select.appendChild(el);
-// }
 fetch('https://frontend-take-home.fetchrewards.com/form')
 .then((response) => response.json())
   .then((data) => console.log(data));
-
-          
-          
-  
     </script>
   </body>
 </html>
