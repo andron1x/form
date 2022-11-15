@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+    <form>
+      <ul>
+        <li>
+          <label for="name">Full name:</label>
+          <input type="text" id="name" name="user_name" />
+        </li>
+        <li>
+          <label for="mail">E-mail:</label>
+          <input type="email" id="mail" name="user_email" />
+        </li>
+        <li>
+          <label for="password">Password:</label>
+          <input type="password" id="pass" name="password" />
+        </li>
+        <li>
+          <select>
+            <option>Occupation</option>
+        </select>
+          <select>
+            <option>State</option>
+        </select>
+      </li>
+
+            <!-- <option value="dog">Dog</option>
+            <<p id="demo"></p>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option> -->
+          </select>
+      </ul>
+    </form>
+    <script>
+//   const getJSON = async url => {
+//   const response = await fetch(url);
+//   return response.json(); 
+// }
+
+// getJSON("https://frontend-take-home.fetchrewards.com/form")
+//   .then(data => console.log(data));
+
+//   var select = document.getElementById("selectNumber");
+// var data = [data];
+
+// for(var i = 0; i < data.length; i++) {
+//     var opt = data[i];
+//     var el = document.createElement("option");
+//     el.textContent = opt;
+//     el.value = opt;
+//     select.appendChild(el);
+// }
+fetch('https://frontend-take-home.fetchrewards.com/form')
+.then((response) => response.json())
+  .then((data) => console.log(data));
+
+          
+          
+  
+    </script>
+  </body>
+</html>
