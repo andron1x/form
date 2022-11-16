@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
   </head>
-  <body>
+  <body onload="createOptions()">
+    <p>This is my page</p>
     <form>
       <ul>
         <li>
@@ -22,20 +24,47 @@
           <input type="password" id="pass" name="password" />
         </li>
         <li>
-          <select>
-            <option>Occupation</option>
+
         </select>
-          <select>
-            <option>State</option>
-        </select>
-      </li>
+       
+        
+        <label for="occupation">Occupation:</label>
+          <select id="occupation">
+
+        </select> 
+       </li>
+       <label for="stts">State:</label>
+       <select id="stts">
+
+
+       </select>
 
       </ul>
     </form>
     <script>
-fetch('https://frontend-take-home.fetchrewards.com/form')
-.then((response) => response.json())
-  .then((data) => console.log(data));
-    </script>
+
+
+
+
+
+
+
+
+ fetch('https://frontend-take-home.fetchrewards.com/form')
+  .then((response) => response.json())
+  .then(data => console.log(data));
+
+  
+
+  function createOptions() { 
+           var stoptions ="<option value='0'>select</option>";
+           
+           for(var states = 1; states <=  51; states++) {
+             stoptions += "<option value='"+states+"'>"+states+"</option>"   
+           }
+           document.getElementById('stts').innerHTML = stoptions;  
+         }
+</script>
+
   </body>
 </html>
